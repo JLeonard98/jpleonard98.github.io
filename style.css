@@ -109,18 +109,18 @@ a:hover {
     -webkit-overflow-scrolling: touch;
 }
 
+
 /* =========================================
    TABLES
    ========================================= */
 
 table {
-    display: table;
     width: 100%;
-    min-width: 760px;
+    min-width: 850px;
     max-width: none;
     margin: 0;
     border-collapse: collapse;
-    table-layout: auto;
+    table-layout: fixed;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
@@ -128,34 +128,66 @@ table {
     font-size: 0.9rem;
 }
 
-/* Table Headers */
+/* Consistent column widths */
+table th:nth-child(1),
+table td:nth-child(1) {
+    width: 10%;
+}
 
+table th:nth-child(2),
+table td:nth-child(2) {
+    width: 30%;
+}
+
+table th:nth-child(3),
+table td:nth-child(3) {
+    width: 15%;
+}
+
+table th:nth-child(4),
+table td:nth-child(4) {
+    width: 13%;
+}
+
+table th:nth-child(5),
+table td:nth-child(5) {
+    width: 17%;
+}
+
+table th:nth-child(6),
+table td:nth-child(6) {
+    width: 15%;
+}
+
+/* Table Headers */
 th {
     background: #1d3553;
     color: white;
-    text-align: left;
-    padding: 15px 13px;
-    white-space: nowrap;
+    text-align: center;
+    padding: 13px 8px;
+    white-space: normal;
+    overflow-wrap: break-word;
     font-weight: 600;
+    vertical-align: middle;
 }
 
 /* Table Cells */
-
 td {
-    padding: 13px;
+    padding: 13px 8px;
     border-bottom: 1px solid var(--border);
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: center;
     color: var(--text);
+    vertical-align: middle;
 }
 
 /* Alternating Rows */
-
 tr:nth-child(even) {
     background: #17263a;
 }
 
 /* Hover Effect */
-
 tr:hover td {
     background: #243a53;
     transition: background 0.2s ease;
@@ -206,37 +238,29 @@ footer {
    MOBILE RESPONSIVENESS
    ========================================= */
 
+
 @media (max-width: 768px) {
 
-    body {
-        padding: 20px 4%;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.3rem;
-    }
-
-    .table-container {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
     table {
-        min-width: 760px;
+        min-width: 850px;
         font-size: 0.8rem;
     }
 
     th,
     td {
-        padding: 10px;
+        padding: 10px 7px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    table {
+        font-size: 0.75rem;
     }
 
-    footer {
-        padding: 20px 10px;
+    th,
+    td {
+        padding: 9px 6px;
     }
 }
 
