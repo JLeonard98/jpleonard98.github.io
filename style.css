@@ -1,0 +1,180 @@
+
+/* =================================
+   JAMES LEONARD - PROFESSIONAL SITE
+   ================================= */
+
+:root {
+    --background: #0b1220;
+    --surface: #131f32;
+    --surface-light: #1b2b42;
+    --accent: #36cbb5;
+    --accent-blue: #4285f4;
+    --text: #edf3fa;
+    --muted: #a7b6c9;
+    --green: #22c55e;
+    --red: #ef6464;
+    --border: #293b53;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 45px 6%;
+    background:
+        radial-gradient(ellipse at top right, #172e47 0%, transparent 45%),
+        var(--background);
+    color: var(--text);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* Main content */
+
+body > h1,
+body > p,
+body > a,
+body > table,
+body > h2 {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: white;
+    letter-spacing: -1.5px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 12px;
+}
+
+h2 {
+    color: var(--accent);
+    font-size: 1.6rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: var(--muted);
+    font-size: 1rem;
+    margin: 8px auto;
+}
+
+/* Links */
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Tables */
+
+table {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto 35px;
+    border-collapse: collapse;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 0.9rem;
+    display: block;
+    overflow-x: auto;
+}
+
+th {
+    background: #1d3553;
+    color: white;
+    text-align: left;
+    padding: 15px 13px;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+td {
+    padding: 13px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+    color: var(--text);
+}
+
+tr:nth-child(even) {
+    background: #17263a;
+}
+
+tr:hover td {
+    background: #243a53;
+    transition: background 0.2s ease;
+}
+
+/* Investment performance indicators */
+
+td[style*="4CAF50"] {
+    color: #86efac !important;
+    background: rgba(34, 197, 94, 0.13) !important;
+    font-weight: bold;
+}
+
+td[style*="E57373"] {
+    color: #fca5a5 !important;
+    background: rgba(239, 100, 100, 0.13) !important;
+    font-weight: bold;
+}
+
+td[style*="D3D3D3"] {
+    color: #cbd5e1 !important;
+    background: rgba(148, 163, 184, 0.15) !important;
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 70px;
+    padding: 25px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 4%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
