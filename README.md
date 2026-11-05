@@ -1,2 +1,3 @@
 # jpleonard98.github.io
-My Super Awesome Website? Welcome to my portfolio website :)!
+Welcome to my portfolio website :)
+Domain: JPLeonard.org
