@@ -96,7 +96,7 @@ table {
     border-radius: 12px;
     overflow: hidden;
     font-size: 0.9rem;
-    display: block;
+    /* display: block;*/
     overflow-x: auto;
 }
 
