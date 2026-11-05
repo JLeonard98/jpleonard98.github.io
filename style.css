@@ -221,6 +221,30 @@ td[style*="D3D3D3"] {
     font-weight: bold;
 }
 
+/* Main Website Header */
+
+.site-header {
+    text-align: center;
+    padding: 45px 20px;
+    margin-bottom: 30px;
+}
+
+.site-header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.site-header h2 {
+    font-size: 22px;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.site-header p {
+    color: #777777;
+    font-size: 15px;
+}
+
 /* =========================================
    FOOTER
    ========================================= */
