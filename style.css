@@ -293,40 +293,91 @@ footer {
 }
 
 
-/* FORCE ALL 6 COLUMNS TO FILL TABLE */
-.table-container table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
+/* ==============================
+   TECH STACK SECTION
+================================= */
+
+.tech-stack-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
-.table-container th:nth-child(1),
-.table-container td:nth-child(1) {
-    width: 10%;
+.tech-stack-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.table-container th:nth-child(2),
-.table-container td:nth-child(2) {
-    width: 30%;
+.tech-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
 }
 
-.table-container th:nth-child(3),
-.table-container td:nth-child(3) {
-    width: 15%;
+/* Three-column card layout */
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
 }
 
-.table-container th:nth-child(4),
-.table-container td:nth-child(4) {
-    width: 13%;
+/* Individual technology cards */
+
+.tech-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
 }
 
-.table-container th:nth-child(5),
-.table-container td:nth-child(5) {
-    width: 17%;
+.tech-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
 }
 
-.table-container th:nth-child(6),
-.table-container td:nth-child(6) {
-    width: 15%;
+.tech-card h3 {
+    color: #2563eb;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
+.tech-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tech-card li {
+    padding: 9px 0;
+    border-bottom: 1px solid #eeeeee;
+    color: #444444;
+}
+
+.tech-card li:last-child {
+    border-bottom: none;
+}
+
+/* Tablet: Two columns */
+
+@media screen and (max-width: 850px) {
+    .tech-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile: One column */
+
+@media screen and (max-width: 550px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-stack-section {
+        padding: 15px;
+    }
+}
