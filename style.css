@@ -1,4 +1,8 @@
-/* Portfolio Styling */
+
+/* =========================================
+   PORTFOLIO STYLING
+   ========================================= */
+
 :root {
     --background: #0b1220;
     --surface: #131f32;
@@ -12,6 +16,10 @@
     --border: #293b53;
 }
 
+/* =========================================
+   GLOBAL STYLING
+   ========================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -24,20 +32,26 @@ body {
     margin: 0;
     padding: 45px 6%;
     background:
-        radial-gradient(ellipse at top right, #172e47 0%, transparent 45%),
+        radial-gradient(
+            ellipse at top right,
+            #172e47 0%,
+            transparent 45%
+        ),
         var(--background);
     color: var(--text);
     font-family: 'Segoe UI', Arial, sans-serif;
     line-height: 1.7;
 }
 
-/* Main content */
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
 
 body > h1,
 body > p,
 body > a,
-body > table,
-body > h2 {
+body > h2,
+body > .table-container {
     max-width: 1250px;
     margin-left: auto;
     margin-right: auto;
@@ -66,7 +80,9 @@ p {
     margin: 8px auto;
 }
 
-/* Links */
+/* =========================================
+   LINKS
+   ========================================= */
 
 a {
     color: var(--accent);
@@ -80,21 +96,39 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Tables */
+/* =========================================
+   TABLE CONTAINER
+   ========================================= */
 
-table {
+.table-container {
     width: 100%;
     max-width: 1250px;
     margin: 0 auto 35px;
+    overflow-x: auto;
+    border-radius: 12px;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* =========================================
+   TABLES
+   ========================================= */
+
+table {
+    display: table;
+    width: 100%;
+    min-width: 760px;
+    max-width: none;
+    margin: 0;
     border-collapse: collapse;
+    table-layout: auto;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
     font-size: 0.9rem;
-    display: block;
-    overflow-x: auto;
 }
+
+/* Table Headers */
 
 th {
     background: #1d3553;
@@ -105,6 +139,8 @@ th {
     font-weight: 600;
 }
 
+/* Table Cells */
+
 td {
     padding: 13px;
     border-bottom: 1px solid var(--border);
@@ -112,16 +148,24 @@ td {
     color: var(--text);
 }
 
+/* Alternating Rows */
+
 tr:nth-child(even) {
     background: #17263a;
 }
+
+/* Hover Effect */
 
 tr:hover td {
     background: #243a53;
     transition: background 0.2s ease;
 }
 
-/* Investment performance indicators */
+/* =========================================
+   INVESTMENT PERFORMANCE INDICATORS
+   ========================================= */
+
+/* Positive Performance */
 
 td[style*="4CAF50"] {
     color: #86efac !important;
@@ -129,11 +173,15 @@ td[style*="4CAF50"] {
     font-weight: bold;
 }
 
+/* Negative Performance */
+
 td[style*="E57373"] {
     color: #fca5a5 !important;
     background: rgba(239, 100, 100, 0.13) !important;
     font-weight: bold;
 }
+
+/* Cash / Liquid Positions */
 
 td[style*="D3D3D3"] {
     color: #cbd5e1 !important;
@@ -141,19 +189,25 @@ td[style*="D3D3D3"] {
     font-weight: bold;
 }
 
-/* Footer */
+/* =========================================
+   FOOTER
+   ========================================= */
 
 footer {
-    margin-top: 70px;
+    max-width: 1250px;
+    margin: 70px auto 0;
     padding: 25px;
     border-top: 1px solid var(--border);
     text-align: center;
     color: var(--muted);
 }
 
-/* Mobile responsiveness */
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
 
 @media (max-width: 768px) {
+
     body {
         padding: 20px 4%;
     }
@@ -166,11 +220,50 @@ footer {
         font-size: 1.3rem;
     }
 
+    .table-container {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
     table {
+        min-width: 760px;
         font-size: 0.8rem;
     }
 
-    th, td {
+    th,
+    td {
         padding: 10px;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE DEVICES
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 15px 3%;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    table {
+        font-size: 0.75rem;
+    }
+
+    th,
+    td {
+        padding: 9px;
     }
 }
