@@ -466,3 +466,22 @@ img {
 .section-nav a:hover {
   background: #163968;
 }
+
+.return-top-container {
+    text-align: center;
+    padding: 35px 0;
+}
+
+.return-top {
+    display: inline-block;
+    background: #2457A7;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.return-top:hover {
+    background: #163968;
+}
