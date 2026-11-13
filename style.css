@@ -446,6 +446,7 @@ img {
 
 
 
+
 /* =========================================
    WEBSITE NAVIGATOR
 ========================================= */
@@ -481,8 +482,6 @@ img {
     text-align: center;
 }
 
-/* Navigator Icons */
-
 .navigator-title span:first-child,
 .navigator-title span:last-child {
     position: absolute;
@@ -498,36 +497,15 @@ img {
     right: 16px;
 }
 
-/* Navigation Container */
-
-.nav-container {
-    width: 100%;
-}
-
-/* Hamburger Button - Hidden on Desktop */
-
-.nav-toggle {
-    display: none;
-    cursor: pointer;
-    color: #ffffff;
-    background: linear-gradient(135deg, #1d3553, #243f60);
-    border: 1px solid #355579;
-    border-radius: 8px;
-    font-family: inherit;
-    transition: all 0.25s ease;
-}
-
-.nav-toggle:hover {
-    background: linear-gradient(135deg, #2563eb, #36a9c5);
-}
-
-/* Desktop Navigation */
+/* Navigation Buttons */
 
 .section-nav {
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
-    gap: 10px;
+    justify-content: center;
+
+    gap: clamp(3px, 0.7vw, 10px);
 
     width: 100%;
     margin: 0;
@@ -537,26 +515,27 @@ img {
 .section-nav a {
     flex: 1 1 0;
     min-width: 0;
-    min-height: 48px;
+    min-height: 42px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 8px 5px;
+    padding: 8px 3px;
 
     background: linear-gradient(135deg, #1d3553, #243f60);
     color: #ffffff !important;
 
     border: 1px solid #355579;
-    border-radius: 8px;
+    border-radius: 7px;
 
-    font-size: 12px;
+    font-size: clamp(8px, 0.85vw, 12px);
     font-weight: 600;
     text-align: center;
     text-decoration: none !important;
 
     white-space: normal;
+    overflow-wrap: anywhere;
 
     transition: all 0.25s ease;
 }
@@ -566,90 +545,78 @@ img {
 .section-nav a:hover {
     background: linear-gradient(135deg, #2563eb, #36a9c5);
     border-color: var(--accent);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 5px 14px rgba(54, 203, 181, 0.18);
 }
 
 /* Keyboard Accessibility */
 
-.section-nav a:focus-visible,
-.nav-toggle:focus-visible {
+.section-nav a:focus-visible {
     outline: 3px solid var(--accent);
     outline-offset: 3px;
 }
 
 /* =========================================
-   MOBILE NAVIGATION
+   TABLET
 ========================================= */
 
 @media screen and (max-width: 768px) {
 
-    .navigator-section {
-        margin: 15px auto 25px;
-    }
-
-    /* Show Hamburger Button */
-
-    .nav-toggle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-
-        width: 100%;
-        min-height: 50px;
-
-        padding: 12px;
-
-        font-size: 16px;
-        font-weight: 700;
-    }
-
-    .hamburger-icon {
-        font-size: 22px;
-        line-height: 1;
-    }
-
-    /* Hide Navigation Links by Default */
-
     .section-nav {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 7px;
-
-        width: 100%;
-        margin-top: 10px;
+        gap: 4px;
     }
-
-    /* Show Navigation When Menu Is Open */
-
-    .section-nav.nav-open {
-        display: flex;
-    }
-
-    /* Individual Mobile Navigation Links */
 
     .section-nav a {
-        flex: none;
-        width: 100%;
-        min-height: 48px;
-
-        padding: 13px 15px;
-
-        font-size: 15px;
-        text-align: center;
+        min-height: 38px;
+        padding: 6px 2px;
+        font-size: 9px;
+        border-radius: 5px;
     }
 
-    .section-nav a:hover {
-        transform: none;
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    .section-nav {
+        gap: 3px;
+    }
+
+    .section-nav a {
+        min-height: 34px;
+        padding: 5px 1px;
+        font-size: 8px;
+        line-height: 1.2;
+        border-radius: 4px;
     }
 
     .navigator-title {
-        font-size: 18px;
+        font-size: 17px;
+        padding: 10px 35px;
     }
+
 }
 
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 360px) {
+
+    .section-nav {
+        gap: 2px;
+    }
+
+    .section-nav a {
+        font-size: 7px;
+        padding: 4px 1px;
+        min-height: 32px;
+    }
+
+}
 
 
 /* =========================================
