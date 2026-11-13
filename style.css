@@ -443,3 +443,26 @@ img {
     margin: 10px auto;
     text-align: center;
 }
+
+.section-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  margin: 15px auto;
+}
+
+.section-nav a {
+  background: #2457A7;
+  color: white;
+  padding: 7px 12px;
+  font-size: 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.section-nav a:hover {
+  background: #163968;
+}
