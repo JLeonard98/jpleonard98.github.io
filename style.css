@@ -663,3 +663,46 @@ img {
     }
 
 }
+
+/* =========================================
+   MOBILE NAVIGATION DISPLAY FIX
+========================================= */
+
+@media screen and (max-width: 550px) {
+
+    .navigator-section .section-nav {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        align-items: stretch !important;
+
+        width: 100% !important;
+        gap: 6px !important;
+
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .navigator-section .section-nav a {
+        display: flex !important;
+        flex: none !important;
+
+        width: 100% !important;
+        min-height: 38px !important;
+
+        justify-content: center !important;
+        align-items: center !important;
+
+        padding: 8px 10px !important;
+
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+
+        color: #ffffff !important;
+
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+}
+
