@@ -458,11 +458,12 @@ img {
 
 /* Navigator Heading */
 
+
 .navigator-title {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
 
     width: 100%;
     margin: 0 0 12px;
@@ -479,6 +480,23 @@ img {
     font-weight: 700;
     text-align: center;
 }
+
+/* Center the Navigator text independently */
+.navigator-title span:first-child,
+.navigator-title span:last-child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navigator-title span:first-child {
+    left: 16px;
+}
+
+.navigator-title span:last-child {
+    right: 16px;
+}
+
 
 /* Navigation Buttons */
 
