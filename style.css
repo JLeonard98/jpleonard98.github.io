@@ -451,8 +451,9 @@ img {
 
 .navigator-section {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1250px;
     margin: 20px auto 35px;
+    padding: 0;
 }
 
 /* Navigator Heading */
