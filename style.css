@@ -445,6 +445,7 @@ img {
 }
 
 
+
 /* =========================================
    WEBSITE NAVIGATOR
 ========================================= */
@@ -457,7 +458,6 @@ img {
 }
 
 /* Navigator Heading */
-
 
 .navigator-title {
     position: relative;
@@ -481,7 +481,8 @@ img {
     text-align: center;
 }
 
-/* Center the Navigator text independently */
+/* Navigator Icons */
+
 .navigator-title span:first-child,
 .navigator-title span:last-child {
     position: absolute;
@@ -497,8 +498,30 @@ img {
     right: 16px;
 }
 
+/* Navigation Container */
 
-/* Navigation Buttons */
+.nav-container {
+    width: 100%;
+}
+
+/* Hamburger Button - Hidden on Desktop */
+
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    color: #ffffff;
+    background: linear-gradient(135deg, #1d3553, #243f60);
+    border: 1px solid #355579;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: all 0.25s ease;
+}
+
+.nav-toggle:hover {
+    background: linear-gradient(135deg, #2563eb, #36a9c5);
+}
+
+/* Desktop Navigation */
 
 .section-nav {
     display: flex;
@@ -549,23 +572,84 @@ img {
 
 /* Keyboard Accessibility */
 
-.section-nav a:focus-visible {
+.section-nav a:focus-visible,
+.nav-toggle:focus-visible {
     outline: 3px solid var(--accent);
     outline-offset: 3px;
 }
 
-/* Smaller Screens: Preserve One Row */
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
 
-@media (max-width: 768px) {
-    .section-nav {
-        gap: 5px;
+@media screen and (max-width: 768px) {
+
+    .navigator-section {
+        margin: 15px auto 25px;
     }
+
+    /* Show Hamburger Button */
+
+    .nav-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+
+        width: 100%;
+        min-height: 50px;
+
+        padding: 12px;
+
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .hamburger-icon {
+        font-size: 22px;
+        line-height: 1;
+    }
+
+    /* Hide Navigation Links by Default */
+
+    .section-nav {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 7px;
+
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Show Navigation When Menu Is Open */
+
+    .section-nav.nav-open {
+        display: flex;
+    }
+
+    /* Individual Mobile Navigation Links */
 
     .section-nav a {
-        font-size: 10px;
-        padding: 7px 2px;
+        flex: none;
+        width: 100%;
+        min-height: 48px;
+
+        padding: 13px 15px;
+
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .section-nav a:hover {
+        transform: none;
+    }
+
+    .navigator-title {
+        font-size: 18px;
     }
 }
+
 
 
 /* =========================================
@@ -593,4 +677,31 @@ img {
 .return-top:hover {
     background-color: #2457A7;
     color: #ffffff !important;
+}
+
+/* =========================================
+   MOBILE HEADER IMPROVEMENTS
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    .site-header {
+        padding: 10px 5px;
+    }
+
+    .site-header h1 {
+        font-size: 27px;
+        letter-spacing: -0.5px;
+    }
+
+    .site-header h2 {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .site-header p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
 }
