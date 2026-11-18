@@ -1,3 +1,4 @@
+console.log("Particles are loading!");
 const particleContainer = document.getElementById("particles");
 
 for (let i = 0; i < 60; i++) {
@@ -18,6 +19,7 @@ for (let i = 0; i < 60; i++) {
 /* =====================================
    SNAKE GAME
 ===================================== */
+console.log("Snake is loading!");
 
 .snake-section {
     padding: 50px 20px;
