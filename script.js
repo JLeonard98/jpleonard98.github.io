@@ -1,6 +1,22 @@
+const particleContainer = document.getElementById("particles");
+
+for (let i = 0; i < 60; i++) {
+    const particle = document.createElement("div");
+
+    particle.classList.add("particle");
+
+    particle.style.left = Math.random() * 100 + "%";
+    particle.style.animationDuration =
+        (5 + Math.random() * 10) + "s";
+
+    particle.style.animationDelay =
+        Math.random() * 10 + "s";
+
+    particleContainer.appendChild(particle);
+}
 
 /* =====================================
-   SNAKE GAME - JPLEONARD.ORG
+   SNAKE GAME
 ===================================== */
 
 .snake-section {
