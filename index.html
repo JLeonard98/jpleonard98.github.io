@@ -10,26 +10,6 @@
 </head>
 <body id="top">
     
-<script>
-const particleContainer = document.getElementById("particles");
-
-for (let i = 0; i < 60; i++) {
-    const particle = document.createElement("div");
-
-    particle.classList.add("particle");
-
-    particle.style.left = Math.random() * 100 + "%";
-    particle.style.animationDuration =
-        (5 + Math.random() * 10) + "s";
-
-    particle.style.animationDelay =
-        Math.random() * 10 + "s";
-
-    particle.style.opacity = Math.random();
-
-    particleContainer.appendChild(particle);
-}
-</script>
 <div id="particles"></div>    
 <header class="site-header">
     <h1>James Leonard's Portfolio Website</h1>
@@ -1177,6 +1157,25 @@ for (let i = 0; i < 60; i++) {
 <footer>
   <p><small>&copy; 2026 Jpleonard.org. All rights reserved.</small></p>
 </footer>
+    
+<script>
+const particleContainer = document.getElementById("particles");
 
+for (let i = 0; i < 60; i++) {
+    const particle = document.createElement("div");
+
+    particle.classList.add("particle");
+
+    particle.style.left = Math.random() * 100 + "%";
+    particle.style.animationDuration =
+        (5 + Math.random() * 10) + "s";
+
+    particle.style.animationDelay =
+        Math.random() * 10 + "s";
+
+    particleContainer.appendChild(particle);
+}
+</script>
+    
 </body>
 </html>
