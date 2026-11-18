@@ -1153,6 +1153,57 @@
     ↑ Return to Top ↑
     </a>
 </div>
+
+<!-- JavaScript Projects: Snake Game -->
+<section id="snake-project" class="snake-section">
+
+  <div class="snake-heading">
+    <h2>🐍 JavaScript Projects</h2>
+    <p>Interactive projects built with HTML, CSS, and JavaScript.</p>
+  </div>
+
+  <div class="snake-card">
+
+    <h3>Snake Game</h3>
+    <p class="snake-description">
+      Eat the food, grow your snake, and try to beat your high score!
+    </p>
+
+    <div class="snake-scoreboard">
+      <div>Score: <span id="snakeScore">0</span></div>
+      <div>Best: <span id="snakeBest">0</span></div>
+    </div>
+
+    <div class="snake-game-container">
+      <canvas id="snakeCanvas" width="400" height="400"></canvas>
+
+      <div id="snakeMessage" class="snake-message">
+        <h3>Ready to Play?</h3>
+        <p>Use your arrow keys to move.</p>
+        <button id="snakeStart">Start Game</button>
+      </div>
+    </div>
+
+    <div class="snake-controls">
+      <button id="snakePause">Pause</button>
+      <button id="snakeRestart">Restart</button>
+    </div>
+
+    <div class="snake-mobile-controls">
+      <button data-direction="up">▲</button>
+      <div>
+        <button data-direction="left">◀</button>
+        <button data-direction="down">▼</button>
+        <button data-direction="right">▶</button>
+      </div>
+    </div>
+
+    <p class="snake-instructions">
+      Controls: Arrow Keys or WASD | Avoid walls and yourself!
+    </p>
+
+  </div>
+</section>
     
 <footer>
   <p><small>&copy; 2026 Jpleonard.org. All rights reserved.</small></p>
