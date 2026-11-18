@@ -833,3 +833,73 @@ img {
     }
 }
 
+
+/* =========================================
+   PROFESSIONAL PROFILE PICTURE
+========================================= */
+
+.profile-picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 25px auto 15px;
+    padding: 10px;
+}
+
+.profile-picture {
+    width: 175px;
+    height: 215px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+
+    box-shadow:
+        0 0 12px rgba(54, 203, 181, 0.25),
+        0 0 25px rgba(54, 203, 181, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Hover Animation */
+
+.profile-picture:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 18px rgba(54, 203, 181, 0.5),
+        0 0 35px rgba(54, 203, 181, 0.3);
+}
+
+/* Mobile Responsiveness */
+
+@media screen and (max-width: 550px) {
+
+    .profile-picture {
+        width: 145px;
+        height: 180px;
+    }
+
+    .profile-picture-container {
+        margin: 15px auto 10px;
+    }
+}
+
+/* Reduced Motion Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .profile-picture {
+        transition: none;
+    }
+
+    .profile-picture:hover {
+        transform: none;
+    }
+}
